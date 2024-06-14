@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Select Mode</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <div id="mode-selection-page" class="box">
+            <h1>Select Mode</h1>
+            <button id="play-ai">Play Against AI</button>
+            <button id="play-friend">Play Against Friend</button>
+        </div>
+    </div>
+    <script>
+        document.getElementById('play-ai').addEventListener('click', () => {
+            localStorage.setItem('playingAgainstAI', 'true');
+            window.location.href = 'game.html';
+        });
+
+        document.getElementById('play-friend').addEventListener('click', () => {
+            localStorage.setItem('playingAgainstAI', 'false');
+            window.location.href = 'game.html';
+        });
+    </script>
+</body>
+</html>

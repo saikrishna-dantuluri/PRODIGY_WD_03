@@ -1,0 +1,95 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    background-image: url('https://static.vecteezy.com/system/resources/previews/001/879/980/large_2x/playful-tic-tac-toe-free-vector.jpg'); /* Corrected image URL */
+    background-size: cover;
+    background-position: center;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+}
+
+.box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.8); /* Slightly transparent white background */
+    border: 2px solid #000;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    max-width: 300px;
+    width: 100%;
+}
+
+h1 {
+    margin: 20px 0;
+}
+
+button {
+    padding: 15px; /* Increased padding for more elevation */
+    font-size: 1rem;
+    cursor: pointer;
+    margin: 10px;
+    width: 100%;
+    max-width: 200px;
+    background-color: #ffffff; /* Background color for button */
+    border: 2px solid #000; /* Border for button */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(107, 36, 250, 0.83); /* Increased shadow for elevation */
+    transition: transform 0.2s, box-shadow 0.2s; /* Smooth transition for effects */
+}
+
+button:hover {
+    transform: translateY(-2px); /* Slight lift on hover */
+    box-shadow: 0 6px 12px rgba(239, 110, 31, 0.923); /* Deeper shadow on hover */
+}
+
+button:active {
+    transform: translateY(0); /* Reset lift on click */
+    box-shadow: 0 2px 4px rgba(100, 35, 241, 0.822); /* Lighter shadow on click */
+}
+
+#game {
+    display: grid;
+    grid-template-columns: repeat(3, 100px);
+    grid-template-rows: repeat(3, 100px);
+    gap: 5px;
+    margin-bottom: 20px;
+}
+
+.cell {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100px;
+    height: 100px;
+    background-color: #fff;
+    border: 2px solid #000;
+    font-size: 2rem;
+    cursor: pointer;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2); /* Initial shadow for elevation */
+    transition: box-shadow 0.5s, transform 0.5s; /* Smooth transition for effects */
+}
+
+.cell:hover {
+    transform: scale(1.05); /* Slightly larger on hover */
+    box-shadow: 0 0 25px rgba(228, 114, 37, 0.8); /* Pink glowing effect on hover */
+}
+
+#controls {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+}
